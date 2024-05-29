@@ -66,7 +66,6 @@
     "prettier": "^3.2.0",
     "react": "^18.3.1",
     "patch-package": "^8.0.0",
-    "react-18": "npm:react@18.3.1",
     "react-dom": "^18.3.1",
     "rimraf": "^2.6.3",
     "rollup": "^4.9.0",

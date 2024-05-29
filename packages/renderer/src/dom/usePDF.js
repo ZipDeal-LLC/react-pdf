@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 
 import queue from 'queue';
-import { useState, useRef, useEffect, useCallback } from 'react-18';
+import { useState, useRef, useEffect, useCallback } from 'react';
 
 import { pdf } from '../index';
 

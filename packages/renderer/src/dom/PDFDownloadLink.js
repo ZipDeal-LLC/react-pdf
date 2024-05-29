@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 
-import { useEffect } from 'react-18';
+import { useEffect } from 'react';
 
 import usePDF from './usePDF';
 
