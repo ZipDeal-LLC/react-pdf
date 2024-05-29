@@ -40,9 +40,9 @@ const getExternal = ({ browser }) => [
   'react/jsx-runtime',
   ...(browser ? [] : ['fs', 'path', 'url']),
   ...Object.keys(pkg.dependencies).filter(
-    (name) => name !== 'react-reconciler',
+    (name) => name !== 'react-reconciler-18',
   ),
-  ...Object.keys(pkg.peerDependencies),
+  // ...Object.keys(pkg.peerDependencies),
 ];
 
 const getPlugins = ({ browser, declarationDests, minify = false }) => [
@@ -50,8 +50,8 @@ const getPlugins = ({ browser, declarationDests, minify = false }) => [
   ...(browser ? [ignore(['fs', 'path', 'url'])] : []),
   alias({
     entries: {
-      'react-reconciler':
-        'react-reconciler/cjs/react-reconciler.production.min.js',
+      'react-reconciler-18':
+        'react-reconciler-18/cjs/react-reconciler.development.js',
     },
   }),
   babel(babelConfig()),

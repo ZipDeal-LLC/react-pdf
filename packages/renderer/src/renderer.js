@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-param-reassign */
 
-import ReactFiberReconciler from 'react-reconciler';
+import ReactFiberReconciler from 'react-reconciler-18';
 import * as scheduler from 'scheduler';
 
 import propsEqual from './utils/propsEqual';

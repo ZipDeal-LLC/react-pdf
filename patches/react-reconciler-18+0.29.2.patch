@@ -1,0 +1,117 @@
+diff --git a/node_modules/react-reconciler-18/cjs/react-reconciler-reflection.development.js b/node_modules/react-reconciler-18/cjs/react-reconciler-reflection.development.js
+index 9d7dea5..b85df17 100644
+--- a/node_modules/react-reconciler-18/cjs/react-reconciler-reflection.development.js
++++ b/node_modules/react-reconciler-18/cjs/react-reconciler-reflection.development.js
+@@ -14,7 +14,7 @@ if (process.env.NODE_ENV !== "production") {
+   (function() {
+ 'use strict';
+ 
+-var React = require('react');
++var React = require('react-18');
+ 
+ var ReactSharedInternals = React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+ 
+diff --git a/node_modules/react-reconciler-18/cjs/react-reconciler-reflection.production.min.js b/node_modules/react-reconciler-18/cjs/react-reconciler-reflection.production.min.js
+index 5df09d3..46cc7d2 100644
+--- a/node_modules/react-reconciler-18/cjs/react-reconciler-reflection.production.min.js
++++ b/node_modules/react-reconciler-18/cjs/react-reconciler-reflection.production.min.js
+@@ -7,7 +7,7 @@
+  * This source code is licensed under the MIT license found in the
+  * LICENSE file in the root directory of this source tree.
+  */
+-'use strict';function h(a){for(var b="https://reactjs.org/docs/error-decoder.html?invariant="+a,c=1;c<arguments.length;c++)b+="&args[]="+encodeURIComponent(arguments[c]);return"Minified React error #"+a+"; visit "+b+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings."}require("react");
++'use strict';function h(a){for(var b="https://reactjs.org/docs/error-decoder.html?invariant="+a,c=1;c<arguments.length;c++)b+="&args[]="+encodeURIComponent(arguments[c]);return"Minified React error #"+a+"; visit "+b+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings."}require("react-18");
+ function l(a){var b=a,c=a;if(a.alternate)for(;b.return;)b=b.return;else{a=b;do b=a,0!==(b.flags&4098)&&(c=b.return),a=b.return;while(a)}return 3===b.tag?c:null}function m(a){if(l(a)!==a)throw Error(h(188));}
+ function n(a){var b=a.alternate;if(!b){b=l(a);if(null===b)throw Error(h(188));return b!==a?null:a}for(var c=a,e=b;;){var f=c.return;if(null===f)break;var d=f.alternate;if(null===d){e=f.return;if(null!==e){c=e;continue}break}if(f.child===d.child){for(d=f.child;d;){if(d===c)return m(f),a;if(d===e)return m(f),b;d=d.sibling}throw Error(h(188));}if(c.return!==e.return)c=f,e=d;else{for(var k=!1,g=f.child;g;){if(g===c){k=!0;c=f;e=d;break}if(g===e){k=!0;e=f;c=d;break}g=g.sibling}if(!k){for(g=d.child;g;){if(g===
+ c){k=!0;c=d;e=f;break}if(g===e){k=!0;e=d;c=f;break}g=g.sibling}if(!k)throw Error(h(189));}}if(c.alternate!==e)throw Error(h(190));}if(3!==c.tag)throw Error(h(188));return c.stateNode.current===c?a:b}function p(a){if(5===a.tag||6===a.tag)return a;for(a=a.child;null!==a;){var b=p(a);if(null!==b)return b;a=a.sibling}return null}function q(a){if(5===a.tag||6===a.tag)return a;for(a=a.child;null!==a;){if(4!==a.tag){var b=q(a);if(null!==b)return b}a=a.sibling}return null}
+diff --git a/node_modules/react-reconciler-18/cjs/react-reconciler.development.js b/node_modules/react-reconciler-18/cjs/react-reconciler.development.js
+index 55163b3..21eb05c 100644
+--- a/node_modules/react-reconciler-18/cjs/react-reconciler.development.js
++++ b/node_modules/react-reconciler-18/cjs/react-reconciler.development.js
+@@ -15,7 +15,7 @@ if (process.env.NODE_ENV !== "production") {
+     var exports = {};
+ 'use strict';
+ 
+-var React = require('react');
++var React = require('react-18');
+ var Scheduler = require('scheduler');
+ 
+ var ReactSharedInternals = React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+diff --git a/node_modules/react-reconciler-18/cjs/react-reconciler.production.min.js b/node_modules/react-reconciler-18/cjs/react-reconciler.production.min.js
+index fe6d2d6..7af18cc 100644
+--- a/node_modules/react-reconciler-18/cjs/react-reconciler.production.min.js
++++ b/node_modules/react-reconciler-18/cjs/react-reconciler.production.min.js
+@@ -9,7 +9,7 @@
+  */
+ module.exports = function $$$reconciler($$$hostConfig) {
+     var exports = {};
+-'use strict';var aa=require("react"),ba=require("scheduler"),ca=Object.assign;function n(a){for(var b="https://reactjs.org/docs/error-decoder.html?invariant="+a,c=1;c<arguments.length;c++)b+="&args[]="+encodeURIComponent(arguments[c]);return"Minified React error #"+a+"; visit "+b+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings."}
++'use strict';var aa=require("react-18"),ba=require("scheduler"),ca=Object.assign;function n(a){for(var b="https://reactjs.org/docs/error-decoder.html?invariant="+a,c=1;c<arguments.length;c++)b+="&args[]="+encodeURIComponent(arguments[c]);return"Minified React error #"+a+"; visit "+b+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings."}
+ var da=aa.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED,ea=Symbol.for("react.element"),fa=Symbol.for("react.portal"),ha=Symbol.for("react.fragment"),ia=Symbol.for("react.strict_mode"),ja=Symbol.for("react.profiler"),ka=Symbol.for("react.provider"),la=Symbol.for("react.context"),ma=Symbol.for("react.forward_ref"),na=Symbol.for("react.suspense"),oa=Symbol.for("react.suspense_list"),pa=Symbol.for("react.memo"),qa=Symbol.for("react.lazy");Symbol.for("react.scope");Symbol.for("react.debug_trace_mode");
+ var ra=Symbol.for("react.offscreen");Symbol.for("react.legacy_hidden");Symbol.for("react.cache");Symbol.for("react.tracing_marker");var sa=Symbol.iterator;function ta(a){if(null===a||"object"!==typeof a)return null;a=sa&&a[sa]||a["@@iterator"];return"function"===typeof a?a:null}
+ function ua(a){if(null==a)return null;if("function"===typeof a)return a.displayName||a.name||null;if("string"===typeof a)return a;switch(a){case ha:return"Fragment";case fa:return"Portal";case ja:return"Profiler";case ia:return"StrictMode";case na:return"Suspense";case oa:return"SuspenseList"}if("object"===typeof a)switch(a.$$typeof){case la:return(a.displayName||"Context")+".Consumer";case ka:return(a._context.displayName||"Context")+".Provider";case ma:var b=a.render;a=a.displayName;a||(a=b.displayName||
+diff --git a/node_modules/react-reconciler-18/cjs/react-reconciler.profiling.min.js b/node_modules/react-reconciler-18/cjs/react-reconciler.profiling.min.js
+index ba97543..aa54226 100644
+--- a/node_modules/react-reconciler-18/cjs/react-reconciler.profiling.min.js
++++ b/node_modules/react-reconciler-18/cjs/react-reconciler.profiling.min.js
+@@ -9,7 +9,7 @@
+  */
+ module.exports = function $$$reconciler($$$hostConfig) {
+     var exports = {};
+-'use strict';var aa=require("react"),ba=require("scheduler"),ca=Object.assign;function n(a){for(var b="https://reactjs.org/docs/error-decoder.html?invariant="+a,c=1;c<arguments.length;c++)b+="&args[]="+encodeURIComponent(arguments[c]);return"Minified React error #"+a+"; visit "+b+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings."}
++'use strict';var aa=require("react-18"),ba=require("scheduler"),ca=Object.assign;function n(a){for(var b="https://reactjs.org/docs/error-decoder.html?invariant="+a,c=1;c<arguments.length;c++)b+="&args[]="+encodeURIComponent(arguments[c]);return"Minified React error #"+a+"; visit "+b+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings."}
+ var da=aa.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED,ea=Symbol.for("react.element"),fa=Symbol.for("react.portal"),ha=Symbol.for("react.fragment"),ia=Symbol.for("react.strict_mode"),ja=Symbol.for("react.profiler"),ka=Symbol.for("react.provider"),la=Symbol.for("react.context"),ma=Symbol.for("react.forward_ref"),na=Symbol.for("react.suspense"),oa=Symbol.for("react.suspense_list"),pa=Symbol.for("react.memo"),qa=Symbol.for("react.lazy");Symbol.for("react.scope");Symbol.for("react.debug_trace_mode");
+ var ra=Symbol.for("react.offscreen");Symbol.for("react.legacy_hidden");Symbol.for("react.cache");Symbol.for("react.tracing_marker");var sa=Symbol.iterator;function ta(a){if(null===a||"object"!==typeof a)return null;a=sa&&a[sa]||a["@@iterator"];return"function"===typeof a?a:null}
+ function ua(a){if(null==a)return null;if("function"===typeof a)return a.displayName||a.name||null;if("string"===typeof a)return a;switch(a){case ha:return"Fragment";case fa:return"Portal";case ja:return"Profiler";case ia:return"StrictMode";case na:return"Suspense";case oa:return"SuspenseList"}if("object"===typeof a)switch(a.$$typeof){case la:return(a.displayName||"Context")+".Consumer";case ka:return(a._context.displayName||"Context")+".Provider";case ma:var b=a.render;a=a.displayName;a||(a=b.displayName||
+diff --git a/node_modules/react-reconciler-18/constants.js b/node_modules/react-reconciler-18/constants.js
+index df4f2b6..0f31c7c 100644
+--- a/node_modules/react-reconciler-18/constants.js
++++ b/node_modules/react-reconciler-18/constants.js
+@@ -1,7 +1,7 @@
+ 'use strict';
+ 
+ if (process.env.NODE_ENV === 'production') {
+-  module.exports = require('./cjs/react-reconciler-constants.production.min.js');
++  module.exports = require('./cjs/react-reconciler-constants.development.js');
+ } else {
+   module.exports = require('./cjs/react-reconciler-constants.development.js');
+ }
+diff --git a/node_modules/react-reconciler-18/index.js b/node_modules/react-reconciler-18/index.js
+index 28d36c9..613614b 100644
+--- a/node_modules/react-reconciler-18/index.js
++++ b/node_modules/react-reconciler-18/index.js
+@@ -1,7 +1,7 @@
+ 'use strict';
+ 
+ if (process.env.NODE_ENV === 'production') {
+-  module.exports = require('./cjs/react-reconciler.production.min.js');
++  module.exports = require('./cjs/react-reconciler.development.js');
+ } else {
+   module.exports = require('./cjs/react-reconciler.development.js');
+ }
+diff --git a/node_modules/react-reconciler-18/package.json b/node_modules/react-reconciler-18/package.json
+index a526040..aa4ad99 100644
+--- a/node_modules/react-reconciler-18/package.json
++++ b/node_modules/react-reconciler-18/package.json
+@@ -26,7 +26,7 @@
+     "node": ">=0.10.0"
+   },
+   "peerDependencies": {
+-    "react": "^18.3.1"
++    "react-18": "^18.3.1"
+   },
+   "dependencies": {
+     "loose-envify": "^1.1.0",
+diff --git a/node_modules/react-reconciler-18/reflection.js b/node_modules/react-reconciler-18/reflection.js
+index a25929b..3cb339d 100644
+--- a/node_modules/react-reconciler-18/reflection.js
++++ b/node_modules/react-reconciler-18/reflection.js
+@@ -1,7 +1,7 @@
+ 'use strict';
+ 
+ if (process.env.NODE_ENV === 'production') {
+-  module.exports = require('./cjs/react-reconciler-reflection.production.min.js');
++  module.exports = require('./cjs/react-reconciler-reflection.development.js');
+ } else {
+   module.exports = require('./cjs/react-reconciler-reflection.development.js');
+ }
