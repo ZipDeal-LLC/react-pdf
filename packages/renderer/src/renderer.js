@@ -6,7 +6,10 @@ import ReactFiberReconciler from 'react-reconciler';
 import * as scheduler from 'scheduler';
 
 import propsEqual from './utils/propsEqual';
-
+import {
+  DefaultEventPriority,
+  NoEventPriority,
+} from 'react-reconciler-constants';
 const emptyObject = {};
 
 const appendChild = (parentInstance, child) => {
@@ -28,7 +31,7 @@ const appendChild = (parentInstance, child) => {
 
   parentInstance.children.push(child);
 };
-
+let currentUpdatePriority = NoEventPriority;
 const createRenderer = ({ onChange = () => {} }) => {
   return ReactFiberReconciler({
     schedulePassiveEffects: scheduler.unstable_scheduleCallback,
@@ -56,6 +59,17 @@ const createRenderer = ({ onChange = () => {} }) => {
       return { type: 'TEXT_INSTANCE', value: text };
     },
 
+    setCurrentUpdatePriority(newPriority) {
+  currentUpdatePriority = newPriority;
+},
+
+
+    getCurrentUpdatePriority() {
+  return currentUpdatePriority;
+},
+resolveUpdatePriority() {
+  return currentUpdatePriority || DefaultEventPriority;
+},
     finalizeInitialChildren(element, type, props) {
       return false;
     },
