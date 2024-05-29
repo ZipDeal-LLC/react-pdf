@@ -8,7 +8,9 @@ import terser from '@rollup/plugin-terser';
 import commonjs from '@rollup/plugin-commonjs';
 import copy from 'rollup-plugin-copy';
 
-import pkg from './package.json' assert { type: 'json' };
+import * as fs from 'node:fs';
+
+const pkg = JSON.parse(fs.readFileSync('./package.json', 'utf8'));
 
 const cjs = {
   exports: 'named',
@@ -42,7 +44,7 @@ const getExternal = ({ browser }) => [
   ...Object.keys(pkg.dependencies).filter(
     (name) => name !== 'react-reconciler',
   ),
-  ...Object.keys(pkg.peerDependencies),
+  // ...Object.keys(pkg.peerDependencies),
 ];
 
 const getPlugins = ({ browser, declarationDests, minify = false }) => [

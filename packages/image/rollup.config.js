@@ -3,7 +3,9 @@ import replace from '@rollup/plugin-replace';
 import ignore from 'rollup-plugin-ignore';
 import nodePolyfills from 'rollup-plugin-polyfill-node';
 
-import pkg from './package.json' assert { type: 'json' };
+import * as fs from 'node:fs';
+
+const pkg = JSON.parse(fs.readFileSync('./package.json', 'utf8'));
 
 const cjs = {
   exports: 'named',

@@ -22,6 +22,7 @@
     "dev": "lerna run dev --scope @react-pdf/examples",
     "changeset": "changeset",
     "version-packages": "changeset version",
+    "postinstall": "patch-package",
     "release": "changeset publish"
   },
   "devDependencies": {
@@ -64,6 +65,8 @@
     "pdfjs-dist": "4.2.67",
     "prettier": "^3.2.0",
     "react": "^18.3.1",
+    "patch-package": "^8.0.0",
+    "react-18": "npm:react@18.3.1",
     "react-dom": "^18.3.1",
     "rimraf": "^2.6.3",
     "rollup": "^4.9.0",
@@ -85,5 +88,8 @@
     "url": "https://opencollective.com/react-pdf",
     "logo": "https://opencollective.com/opencollective/logo.txt"
   },
-  "packageManager": "yarn@1.22.19"
+  "packageManager": "yarn@1.22.19",
+  "dependencies": {
+    "react-reconciler": "^0.29.2"
+  }
 }

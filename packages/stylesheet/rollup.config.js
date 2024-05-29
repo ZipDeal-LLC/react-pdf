@@ -1,7 +1,9 @@
 import localResolve from 'rollup-plugin-local-resolve';
 import babel from '@rollup/plugin-babel';
 
-import pkg from './package.json' assert { type: 'json' };
+import * as fs from 'node:fs';
+
+const pkg = JSON.parse(fs.readFileSync('./package.json', 'utf8'));
 
 const cjs = {
   exports: 'named',
