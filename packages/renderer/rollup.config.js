@@ -44,7 +44,7 @@ const getExternal = ({ browser }) => [
   ...Object.keys(pkg.dependencies).filter(
     (name) => name !== 'react-reconciler',
   ),
-  // ...Object.keys(pkg.peerDependencies),
+  ...Object.keys(pkg.peerDependencies),
 ];
 
 const getPlugins = ({ browser, declarationDests, minify = false }) => [
